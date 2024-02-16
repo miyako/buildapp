@@ -606,6 +606,24 @@
 							"width": 0
 						}
 					]
+				},
+				"Text77": {
+					"type": "text",
+					"text": "Hint",
+					"top": 420,
+					"left": 160,
+					"width": 152,
+					"height": 16,
+					"fontWeight": "bold"
+				},
+				"Text78": {
+					"type": "text",
+					"text": "Default Data requires Pack Project",
+					"top": 440,
+					"left": 160,
+					"width": 464,
+					"height": 16,
+					"fontWeight": "normal"
 				}
 			},
 			"entryOrder": [
@@ -2735,7 +2753,7 @@
 			]
 		}
 	],
-	"geometryStamp": 3074,
+	"geometryStamp": 3152,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
