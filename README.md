@@ -22,6 +22,12 @@ $buildSettingsFile:=File(Build application settings file)
 var $buildApp : cs.BuildApp.BuildApp
 $buildApp:=cs.BuildApp.BuildApp.new($buildSettingsFile)
 
+//customise path
+var $destinationFolder : 4D.Folder
+$destinationFolder:=Folder(fk desktop folder).folder($buildApp.BuildApplicationName)
+$destinationFolder.create()
+$buildApp.BuildMacDestFolder:=$destinationFolder.platformPath
+
 If (Is macOS)
 	//to find licenses in keychain
 	$buildApp.findCertificates("name == :1 and kind == :2"; "@miyako@"; "Developer ID Application")
@@ -29,12 +35,10 @@ If (Is macOS)
 	$BuildApp.AdHocSign:=False
 End if 
 
-If (True)
-	//customise any key
-	$BuildApp.Versioning.Common.CommonVersion:="1.0.0"
-	$BuildApp.Versioning.Common.CommonCopyright:="©︎K.MIYAKO"
-	$BuildApp.Versioning.Common.CommonCompanyName:="com.4d.miyako"
-End if 
+//customise key
+$BuildApp.Versioning.Common.CommonVersion:="1.0.0"
+$BuildApp.Versioning.Common.CommonCopyright:="©︎K.MIYAKO"
+$BuildApp.Versioning.Common.CommonCompanyName:="com.4d.miyako"
 
 $buildApp.editor()
 ```
