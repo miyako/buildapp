@@ -9,6 +9,7 @@ Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys
 * Compatible with [BUILD APPLICATION](https://doc.4d.com/4Dv20/4D/20.2/BUILD-APPLICATION.301-6720787.en.html)
 * Compatible with [4d-class-compiler](https://github.com/miyako/4d-class-compiler)
 * Supports all XML keys up to v20
+* Automatically downloads latest [4d-class-compiler](https://github.com/miyako/4d-class-compiler) from GitHub
 
 # Install
 
