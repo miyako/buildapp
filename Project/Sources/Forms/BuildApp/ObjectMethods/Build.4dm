@@ -8,4 +8,6 @@ If (Form event code:C388=On Clicked:K2:4)
 	
 	BUILD APPLICATION:C871($buildProject.platformPath)
 	
+	SHOW ON DISK:C922(Form:C1466.BuildApp["Build"+(Is macOS:C1572 ? "Mac" : "Win")+"DestFolder"])
+	
 End if 
