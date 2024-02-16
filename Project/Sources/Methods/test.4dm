@@ -1,6 +1,6 @@
 //%attributes = {}
 var $buildSettingsFile : 4D:C1709.File
-$buildSettingsFile:=File:C1566("Macintosh HD:Users:miyako:Desktop:buildApp.4DSettings"; fk platform path:K87:2)
+$buildSettingsFile:=File:C1566(Build application settings file:K5:60)
 
 var $buildApp : cs:C1710.BuildApp
 
