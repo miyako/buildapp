@@ -71,7 +71,7 @@ Function updateApplicationPath($name : Text)->$icon : Picture
 			End if 
 	End case 
 	
-	$form[$name+"ApplicationIcon"]:=This:C1470._setupApplicationPath($form; $name)
+	$form[$name+"ApplicationIcon"]:=This:C1470._setupApplicationPath($name)
 	
 Function updateComponentsList($item : Object)->$icon : Picture
 	
@@ -116,7 +116,7 @@ Function updateIconPath($name : Text)->$icon : Picture
 			$form.BuildApp.SourcesFiles[$name][$name+"Icon"+(Is macOS:C1572 ? "Mac" : "Win")+"Path"]:=$path
 	End case 
 	
-	$form[$name+"Icon"]:=This:C1470._setupIconPath($form; $name)
+	$form[$name+"Icon"]:=This:C1470._setupIconPath($name)
 	
 Function updatePluginsList($item : Object)->$icon : Picture
 	
