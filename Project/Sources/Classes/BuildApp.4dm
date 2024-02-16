@@ -1033,6 +1033,8 @@ Function _refresh($settingsFile : 4D:C1709.File)
 	
 	This:C1470.parseFile($settingsFile)
 	
+	This:C1470.findLicenses()
+	
 Function _serverLicenses()->$licenses : Collection
 	
 	$licenses:=["4UOE"; "4UUD"; "4UOS"; "4DOM"]

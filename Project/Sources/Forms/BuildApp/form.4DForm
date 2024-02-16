@@ -863,7 +863,7 @@
 				},
 				"BuildApp.SourcesFiles.CS.IsOEM": {
 					"type": "checkbox",
-					"text": "IsOEM",
+					"text": "Is OEM",
 					"top": 185,
 					"left": 160,
 					"width": 192,
