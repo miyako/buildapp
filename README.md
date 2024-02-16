@@ -9,3 +9,32 @@ Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys
 * Compatible with [BUILD APPLICATION](https://doc.4d.com/4Dv20/4D/20.2/BUILD-APPLICATION.301-6720787.en.html)
 * Compatible with [4d-class-compiler](https://github.com/miyako/4d-class-compiler)
 * Supports all XML keys up to v20
+
+# Install
+
+1. Install project to components
+1. Run the code
+
+```4d
+var $buildSettingsFile : 4D.File
+$buildSettingsFile:=File(Build application settings file)
+
+var $buildApp : cs.BuildApp.BuildApp
+$buildApp:=cs.BuildApp.BuildApp.new($buildSettingsFile)
+
+If (Is macOS)
+	//to find licenses in keychain
+	$buildApp.findCertificates("name == :1 and kind == :2"; "@miyako@"; "Developer ID Application")
+	$BuildApp.SignApplication.MacSignature:=True
+	$BuildApp.AdHocSign:=False
+End if 
+
+If (True)
+	//customise any key
+	$BuildApp.Versioning.Common.CommonVersion:="1.0.0"
+	$BuildApp.Versioning.Common.CommonCopyright:="©︎K.MIYAKO"
+	$BuildApp.Versioning.Common.CommonCompanyName:="com.4d.miyako"
+End if 
+
+$buildApp.editor()
+```
