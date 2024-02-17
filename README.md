@@ -44,6 +44,6 @@ $BuildApp.Versioning.Common.CommonCompanyName:="com.4d.miyako"
 $buildApp.editor()
 ```
 
-<img src="https://github.com/miyako/4d-class-buildapp/assets/1725068/dec9ae80-50d9-4da9-bd02-246b902d5b3a" height="600" />
+<img src="https://github.com/miyako/4d-class-buildapp/assets/1725068/dec9ae80-50d9-4da9-bd02-246b902d5b3a" width="600" />
 
 
