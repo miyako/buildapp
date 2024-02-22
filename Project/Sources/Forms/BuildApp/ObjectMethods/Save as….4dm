@@ -1,6 +1,9 @@
 If (Form event code:C388=On Clicked:K2:4)
 	
-	$fileName:=Select document:C905(System folder:C487(Desktop:K41:16)+"buildApp.4Dsettings"; ".4DSettings;.xml"; "Save build project…"; File name entry:K24:17 | Package open:K24:8)
+	var $buildSettingsFile : 4D:C1709.File
+	$buildSettingsFile:=File:C1566(Build application settings file:K5:60)
+	
+	$fileName:=Select document:C905($buildSettingsFile.platformPath; ".4DSettings;.xml"; "Save build project…"; File name entry:K24:17 | Package open:K24:8)
 	
 	If (OK=1)
 		

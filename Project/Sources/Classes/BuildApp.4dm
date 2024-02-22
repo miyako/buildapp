@@ -251,7 +251,13 @@ Function loadFromHost() : cs:C1710.BuildApp
 Function toFile($file : 4D:C1709.File) : cs:C1710.BuildApp
 	
 	If (OB Instance of:C1731($file; 4D:C1709.File))
+		$ArrayLicenseMac:=This:C1470.Licenses.ArrayLicenseMac.Item
+		$ArrayLicenseWin:=This:C1470.Licenses.ArrayLicenseWin.Item
+		This:C1470.Licenses.ArrayLicenseMac.Item:=[]
+		This:C1470.Licenses.ArrayLicenseWin.Item:=[]
 		$file.setText(This:C1470.toString(); "utf-8"; Document with CR:K24:21)
+		This:C1470.Licenses.ArrayLicenseMac.Item:=$ArrayLicenseMac
+		This:C1470.Licenses.ArrayLicenseWin.Item:=$ArrayLicenseWin
 	End if 
 	
 	return This:C1470
