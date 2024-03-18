@@ -144,7 +144,6 @@ Function launch($buildProject : 4D:C1709.File; $compileProject : 4D:C1709.File)
 		$folder:=Folder:C1567(Temporary folder:C486; fk platform path:K87:2).folder(Generate UUID:C1066)
 		$folder.create()
 		
-		$command:="chcp 65001\r\n"
 		$command+=This:C1470.escape($tool4d.platformPath)
 		$command+=" "+This:C1470.escape($project.platformPath)
 		$command+=" --startup-method=build"
@@ -155,8 +154,9 @@ Function launch($buildProject : 4D:C1709.File; $compileProject : 4D:C1709.File)
 		$file.setText($command)
 		
 /*
-VirtualTerminalLevel:1 is enabled for this demo
-Adminstration Language is set to UTF-8 for this demo 
+to support utf-8
+VirtualTerminalLevel:1 (old windows 10)
+Adminstration Language:UTF-8 (beta feature)
 */
 		
 		SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_BLOCKING_EXTERNAL_PROCESS"; "false")
