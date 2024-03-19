@@ -15,8 +15,8 @@ env:
   project_path: a-simple-project/Project/a-simple-project.4DProject
   startup_method: test
   skip_onstartup: true
-  create_data: true
-  dataless: false
+  create_data: false
+  dataless: true
   data: ''
   
 jobs:
