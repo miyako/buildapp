@@ -21,7 +21,7 @@ on:
           required: true
 
 env: 
-  project_path: 4d-class-buildapp/Project/buildApp.4DProject
+  project_path: BuildApp/Project/BuildApp.4DProject
   
 jobs:
 
