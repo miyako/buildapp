@@ -4,3 +4,4 @@ BuildApp/Project/DerivedData/*
 BuildApp/Resources/4d-class-compiler/*
 BuildApp/Libraries/lib4d-arm64.dylib
 BuildApp/Settings/buildApp.4DSettings
+BuildApp/Resources/en.lproj/syntaxEN.json
