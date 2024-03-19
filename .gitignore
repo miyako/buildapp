@@ -1,6 +1,6 @@
--buildapp/Data/*
--buildapp/userPreferences.*
--buildapp/Project/DerivedData/*
--buildapp/Resources/4d-class-compiler/*
--buildapp/Libraries/lib4d-arm64.dylib
--buildapp/Settings/buildApp.4DSettings
+BuildApp/Data/*
+BuildApp/userPreferences.*
+BuildApp/Project/DerivedData/*
+BuildApp/Resources/4d-class-compiler/*
+BuildApp/Libraries/lib4d-arm64.dylib
+BuildApp/Settings/buildApp.4DSettings
