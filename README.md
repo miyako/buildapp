@@ -2,6 +2,19 @@
 ![platform](https://img.shields.io/static/v1?label=platform&message=mac-intel%20|%20mac-arm%20|%20win-64&color=blue)
 [![license](https://img.shields.io/github/license/miyako/4d-class-buildapp)](LICENSE)
 
+ # buildapp
+
+ ```json
+{
+	"dependencies": {
+		"buildapp": {
+			"github": "miyako/buildapp",
+			"version": "^2.0.10"
+		}
+	}
+}
+```
+
 Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
 
 * Alternative to [Build4D](https://github.com/4d-depot/Build4D)
@@ -12,10 +25,7 @@ Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys
 * GUI editor
 * `tool4d` launcher
   
-# Install
-
-1. Install project to components
-1. Run the code
+## Usage
 
 ```4d
 var $buildSettingsFile : 4D.File
