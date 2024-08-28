@@ -19,7 +19,9 @@ Else
 	$buildApp:=cs:C1710.BuildApp.new($buildSettingsFile)
 	
 	If (Is macOS:C1572)
+		//%W-550.12
 		$buildApp.findCertificates("name == :1 and kind == :2"; "@miyako@"; "Developer ID Application")
+		//%W+550.12
 		$BuildApp.SignApplication.MacSignature:=True:C214
 		$BuildApp.AdHocSign:=False:C215
 	End if 
