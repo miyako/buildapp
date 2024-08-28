@@ -624,6 +624,15 @@
 					"width": 464,
 					"height": 16,
 					"fontWeight": "normal"
+				},
+				"tool4d not found": {
+					"type": "text",
+					"text": "tool4d not found",
+					"top": 612,
+					"left": 436,
+					"width": 208,
+					"height": 16,
+					"visibility": "hidden"
 				}
 			},
 			"entryOrder": [
@@ -2753,7 +2762,7 @@
 			]
 		}
 	],
-	"geometryStamp": 3152,
+	"geometryStamp": 3158,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -20,11 +20,19 @@ Else
 	
 	If (Is macOS:C1572)
 		//%W-550.12
-		$buildApp.findCertificates("name == :1 and kind == :2"; "@miyako@"; "Developer ID Application")
+		$buildApp.findCertificates("kind == :1"; "Developer ID Application")
 		//%W+550.12
 		$BuildApp.SignApplication.MacSignature:=True:C214
 		$BuildApp.AdHocSign:=False:C215
 	End if 
+	
+	If (Is macOS:C1572)
+		$BuildApp.BuildMacDestFolder:=Folder:C1567(fk desktop folder:K87:19).platformPath
+	Else 
+		$BuildApp.BuildWinDestFolder:=Folder:C1567(fk desktop folder:K87:19).platformPath
+	End if 
+	
+	$BuildApp.BuildApplicationName:=File:C1566(Structure file:C489; fk platform path:K87:2).name
 	
 	If (True:C214)
 		$BuildApp.Versioning.Common.CommonVersion:="1.0.0"

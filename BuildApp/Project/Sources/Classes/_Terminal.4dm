@@ -24,7 +24,12 @@ Class constructor
 		4D:C1709.HTTPRequest.new(This:C1470.assetUrl; $options)
 		
 	Else 
-		OBJECT SET ENABLED:C1123(*; "Build CLI…"; True:C214)
+		OBJECT SET ENABLED:C1123(*; "Build CLI…"; This:C1470.tool4d.exists)
+		If (This:C1470.tool4d.exists)
+			OBJECT SET HELP TIP:C1181(*; "Build CLI…"; "")
+		Else 
+			OBJECT SET HELP TIP:C1181(*; "Build CLI…"; "tool4d not found in "+This:C1470.tool4d.path)
+		End if 
 	End if 
 	
 	//MARK:-public methods
@@ -45,8 +50,12 @@ Function onResponse($request : 4D:C1709.HTTPRequest; $event : Object)
 		$zip.root.copyTo($tempFolder)
 		$tempFolder.folder(This:C1470.compilerFolderName).moveTo(Folder:C1567(fk resources folder:K87:11))
 		
-		OBJECT SET ENABLED:C1123(*; "Build CLI…"; This:C1470.compiler.exists)
-		
+		OBJECT SET ENABLED:C1123(*; "Build CLI…"; This:C1470.compiler.exists && This:C1470.tool4d.exists)
+		If (This:C1470.tool4d.exists)
+			OBJECT SET HELP TIP:C1181(*; "Build CLI…"; "")
+		Else 
+			OBJECT SET HELP TIP:C1181(*; "Build CLI…"; "tool4d not found in "+This:C1470.tool4d.path)
+		End if 
 	End if 
 	
 Function onError($request : 4D:C1709.HTTPRequest; $event : Object)
@@ -128,7 +137,7 @@ Function launch($buildProject : 4D:C1709.File; $compileProject : 4D:C1709.File)
 		
 		$command:=This:C1470.escape($tool4d.path)
 		$command:=$command+" "+This:C1470.escape($project.path)
-		$command:=$command+" --startup-method=build"
+		$command:=$command+" --startup-method=rebuild"
 		$command:=$command+" --user-param="+This:C1470.escape($buildProject.path)+","+This:C1470.escape($compileProject.path)
 		$command:=$command+" --dataless"
 		
