@@ -24,7 +24,12 @@ Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys
 * Converts XML to JSON and vice versa
 * GUI editor
 * `tool4d` launcher
-  
+
+<img src="https://github.com/user-attachments/assets/7f5e84de-71f5-488b-b5bf-e4b0101fa77b" width=500 height=auto />
+
+<img src="https://github.com/user-attachments/assets/ccb5b914-db6e-481a-85d5-67d59c814897" width=450 height=auto />
+
+
 ## Usage
 
 ```4d
