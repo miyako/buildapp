@@ -34,11 +34,7 @@ $buildSettingsFile:=File(Build application settings file)
 var $buildApp : cs.BuildApp.BuildApp
 $buildApp:=cs.BuildApp.BuildApp.new($buildSettingsFile)
 
-//customise path
-var $destinationFolder : 4D.Folder
-$destinationFolder:=Folder(fk desktop folder).folder($buildApp.BuildApplicationName)
-$destinationFolder.create()
-$buildApp.BuildMacDestFolder:=$destinationFolder.platformPath
+$buildApp:=cs.BuildApp.BuildApp.new($buildSettingsFile)
 
 If (Is macOS)
 	//to find licenses in keychain
@@ -47,6 +43,14 @@ If (Is macOS)
 	$BuildApp.AdHocSign:=False
 End if 
 
+If (Is macOS)
+	$BuildApp.BuildMacDestFolder:=Folder(fk desktop folder).platformPath
+Else 
+	$BuildApp.BuildWinDestFolder:=Folder(fk desktop folder).platformPath
+End if 
+
+$BuildApp.BuildApplicationName:=File(Structure file; fk platform path).name
+
 //customise key
 $BuildApp.Versioning.Common.CommonVersion:="1.0.0"
 $BuildApp.Versioning.Common.CommonCopyright:="©︎K.MIYAKO"
@@ -54,4 +58,3 @@ $BuildApp.Versioning.Common.CommonCompanyName:="com.4d.miyako"
 
 $buildApp.editor()
 ```
-
