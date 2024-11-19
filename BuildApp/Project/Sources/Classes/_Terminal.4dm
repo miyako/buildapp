@@ -153,7 +153,7 @@ Function launch($buildProject : 4D:C1709.File; $compileProject : 4D:C1709.File)
 		$folder:=Folder:C1567(Temporary folder:C486; fk platform path:K87:2).folder(Generate UUID:C1066)
 		$folder.create()
 		
-		$command+=This:C1470.escape($tool4d.platformPath)
+		$command:=This:C1470.escape($tool4d.platformPath)
 		$command+=" "+This:C1470.escape($project.platformPath)
 		$command+=" --startup-method=build"
 		$command+=" --user-param="+This:C1470.escape($buildProject.path+","+$compileProject.path)
