@@ -57,7 +57,7 @@ Function findComponents($compileProject : 4D:C1709.File; $asFiles : Boolean)->$c
 	$projectComponentsFolder:=$compileProject.parent.parent.folder("Components")
 	
 	If (Is macOS:C1572)
-		$applicationComponentsFolder:=Folder:C1567(Application file:C491; fk platform path:K87:2).folder("Contents").folder("Components")
+		$applicationComponentsFolder:=Folder:C1567(Application file:C491; fk platform path:K87:2).folder("Contents/Components")
 	Else 
 		$applicationComponentsFolder:=Folder:C1567(Application file:C491; fk platform path:K87:2).parent.folder("Components")
 	End if 
@@ -90,6 +90,22 @@ Function findComponents($compileProject : 4D:C1709.File; $asFiles : Boolean)->$c
 	
 	For each ($file; $files)
 		$components.push($file)
+	End for each 
+	
+	//project,application > dependencies,environment4d
+	
+	var $componentManager : cs:C1710._ComponentManager
+	$componentManager:=cs:C1710._ComponentManager.new()
+	
+	For each ($component; $componentManager.components)
+		If (Not:C34($paths.includes($component.path)))
+			Case of 
+				: (OB Instance of:C1731($component; 4D:C1709.Folder))
+					$folders.push($component)
+				: (OB Instance of:C1731($component; 4D:C1709.File))
+					$files.push($component)
+			End case 
+		End if 
 	End for each 
 	
 	For each ($folder; $folders)
