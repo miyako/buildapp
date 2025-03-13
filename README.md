@@ -9,7 +9,7 @@
 	"dependencies": {
 		"buildapp": {
 			"github": "miyako/buildapp",
-			"version": "*"
+			"version": "latest"
 		}
 	}
 }
