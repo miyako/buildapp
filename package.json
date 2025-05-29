@@ -9,7 +9,7 @@
   "version": "20R9.16",
   "tool": {
     "platform": "macos",
-    "branch": "20Rx",
+    "branch": "20%20Rx",
     "version": "20%20R9",
     "build": "latest",
     "arch": "arm"
