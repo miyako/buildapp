@@ -2709,6 +2709,48 @@
 		},
 		{
 			"objects": {
+				"BuildApp.CS.CertificateAuthoritiesCertificates": {
+					"type": "input",
+					"left": 380,
+					"top": 299,
+					"width": 244,
+					"height": 97,
+					"dataSource": "Form:C1466.BuildApp.CS.CertificateAuthoritiesCertificates",
+					"multiline": "no"
+				},
+				"Text76": {
+					"type": "text",
+					"text": "Certificate Authorities Certificates:",
+					"top": 300,
+					"left": 160,
+					"width": 210,
+					"height": 16,
+					"textAlign": "right",
+					"fontWeight": "normal"
+				},
+				"CertificateDomainName": {
+					"type": "text",
+					"text": "Certificate Domain Name:",
+					"top": 180,
+					"left": 160,
+					"width": 210,
+					"height": 16,
+					"textAlign": "right",
+					"fontWeight": "normal"
+				},
+				"BuildApp.CS.CertificateDomainName": {
+					"type": "input",
+					"left": 380,
+					"top": 179,
+					"width": 244,
+					"height": 97,
+					"dataSource": "Form:C1466.BuildApp.CS.CertificateDomainName",
+					"multiline": "no"
+				}
+			}
+		},
+		{
+			"objects": {
 				"BuildApp.AutoUpdate.CS.ClientUpdateWin.StartElevated": {
 					"type": "checkbox",
 					"text": "Start Elevated (Mac Server)",
@@ -2792,14 +2834,10 @@
 					"dataSource": "Form:C1466.BuildApp.DataFilePath",
 					"multiline": "no"
 				}
-			},
-			"entryOrder": [
-				"BuildApp.DataFilePath",
-				"BuildApp.CS.HardLink"
-			]
+			}
 		}
 	],
-	"geometryStamp": 3483,
+	"geometryStamp": 3551,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
