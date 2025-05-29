@@ -110,9 +110,9 @@
 				},
 				"BuildApp.BuildApplicationName": {
 					"type": "input",
-					"left": 360,
+					"left": 300,
 					"top": 9,
-					"width": 204,
+					"width": 150,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.BuildApplicationName",
 					"multiline": "no"
@@ -122,7 +122,7 @@
 					"text": "Application Name:",
 					"top": 10,
 					"left": 160,
-					"width": 190,
+					"width": 130,
 					"height": 16,
 					"textAlign": "right",
 					"fontWeight": "normal"
@@ -146,7 +146,7 @@
 				"Text1": {
 					"type": "text",
 					"text": "Build Destination Folder:",
-					"top": 50,
+					"top": 70,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -156,7 +156,7 @@
 				"BuildApp.UseStandardZipFormat": {
 					"type": "checkbox",
 					"text": "Use Standard Zip Format",
-					"top": 105,
+					"top": 115,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -171,7 +171,7 @@
 				"BuildApp.PackProject": {
 					"type": "checkbox",
 					"text": "Pack Project",
-					"top": 85,
+					"top": 95,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -186,7 +186,7 @@
 				},
 				"Line": {
 					"type": "line",
-					"top": 138,
+					"top": 148,
 					"left": 160,
 					"width": 484,
 					"height": 0,
@@ -197,7 +197,7 @@
 				"BuildDest.BuildDestFolder": {
 					"type": "dropdown",
 					"left": 326,
-					"top": 47,
+					"top": 67,
 					"width": 243,
 					"height": 23,
 					"events": [
@@ -211,7 +211,7 @@
 				"BuildDestIcon": {
 					"type": "input",
 					"left": 580,
-					"top": 42,
+					"top": 62,
 					"width": 32,
 					"height": 32,
 					"enterable": false,
@@ -334,6 +334,41 @@
 					"shortcutShift": false,
 					"shortcutAlt": true,
 					"shortcutKey": "t"
+				},
+				"BuildApp.Licenses.EvaluationMode": {
+					"type": "checkbox",
+					"text": "Evaluation Application",
+					"top": 115,
+					"left": 360,
+					"width": 192,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.BuildApp.Licenses.EvaluationMode",
+					"dataSourceTypeHint": "boolean",
+					"fontWeight": "normal",
+					"focusable": false,
+					"method": "ObjectMethods/BuildApp.Licenses.EvaluationMode.4dm"
+				},
+				"Text75": {
+					"type": "text",
+					"text": "Evaluation Name:",
+					"top": 39,
+					"left": 160,
+					"width": 130,
+					"height": 16,
+					"textAlign": "right",
+					"fontWeight": "normal"
+				},
+				"BuildApp.Licenses.EvaluationName": {
+					"type": "input",
+					"left": 300,
+					"top": 39,
+					"width": 150,
+					"height": 17,
+					"dataSource": "Form:C1466.BuildApp.Licenses.EvaluationName",
+					"multiline": "no"
 				}
 			},
 			"entryOrder": [
@@ -350,7 +385,9 @@
 				"Save as…",
 				"Build CLI…",
 				"Show XML…",
-				"Show JSON…"
+				"Show JSON…",
+				"BuildApp.Licenses.EvaluationMode",
+				"BuildApp.Licenses.EvaluationName"
 			]
 		},
 		{
@@ -358,7 +395,7 @@
 				"BuildApp.BuildComponent": {
 					"type": "checkbox",
 					"text": "Build Component",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -373,7 +410,7 @@
 				"BuildApp.BuildCompiled": {
 					"type": "checkbox",
 					"text": "Build Compiled",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -388,7 +425,7 @@
 				"BuildApp.IncludeAssociatedFolders": {
 					"type": "checkbox",
 					"text": "Include Associated Folders",
-					"top": 145,
+					"top": 160,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -403,9 +440,9 @@
 				"Plugins": {
 					"type": "listbox",
 					"left": 316,
-					"top": 225,
+					"top": 240,
 					"width": 152,
-					"height": 385,
+					"height": 365,
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -463,9 +500,9 @@
 				"components": {
 					"type": "listbox",
 					"left": 486,
-					"top": 225,
+					"top": 240,
 					"width": 152,
-					"height": 385,
+					"height": 365,
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -523,7 +560,7 @@
 				"Text63": {
 					"type": "text",
 					"text": "Modules",
-					"top": 200,
+					"top": 215,
 					"left": 160,
 					"width": 152,
 					"height": 16,
@@ -532,7 +569,7 @@
 				"Text64": {
 					"type": "text",
 					"text": "Plugins",
-					"top": 200,
+					"top": 215,
 					"left": 315,
 					"width": 152,
 					"height": 16,
@@ -541,7 +578,7 @@
 				"Text65": {
 					"type": "text",
 					"text": "Components",
-					"top": 200,
+					"top": 215,
 					"left": 485,
 					"width": 152,
 					"height": 16,
@@ -550,9 +587,9 @@
 				"modules": {
 					"type": "listbox",
 					"left": 160,
-					"top": 225,
+					"top": 240,
 					"width": 152,
-					"height": 385,
+					"height": 365,
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -649,7 +686,7 @@
 				"BuildApp.SourcesFiles.RuntimeVL.RuntimeVLIncludeIt": {
 					"type": "checkbox",
 					"text": "RuntimeVL Include It",
-					"top": 145,
+					"top": 160,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -665,7 +702,7 @@
 				"BuildApp.SourcesFiles.RuntimeVL.IsOEM": {
 					"type": "checkbox",
 					"text": "Is OEM",
-					"top": 185,
+					"top": 200,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -681,7 +718,7 @@
 				"BuildApp.RuntimeVL.LastDataPathLookup": {
 					"type": "dropdown",
 					"left": 406,
-					"top": 207,
+					"top": 222,
 					"width": 163,
 					"height": 23,
 					"events": [
@@ -695,7 +732,7 @@
 				"Text2": {
 					"type": "text",
 					"text": "Last Data Path Lookup:",
-					"top": 210,
+					"top": 225,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -705,7 +742,7 @@
 				"BuildApp.BuildApplicationSerialized": {
 					"type": "checkbox",
 					"text": "Build Application Serialized",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -721,7 +758,7 @@
 				"Text43": {
 					"type": "text",
 					"text": "RuntimeVL Folder:",
-					"top": 250,
+					"top": 265,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -731,7 +768,7 @@
 				"Text44": {
 					"type": "text",
 					"text": "RuntimeVL Icon Path:",
-					"top": 290,
+					"top": 305,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -741,7 +778,7 @@
 				"RuntimeVLIcon": {
 					"type": "input",
 					"left": 580,
-					"top": 282,
+					"top": 297,
 					"width": 32,
 					"height": 32,
 					"enterable": false,
@@ -763,7 +800,7 @@
 				"RuntimeVL.RuntimeVLFolder": {
 					"type": "dropdown",
 					"left": 326,
-					"top": 247,
+					"top": 262,
 					"width": 243,
 					"height": 23,
 					"events": [
@@ -777,7 +814,7 @@
 				"RuntimeVL.RuntimeVLIconPath": {
 					"type": "dropdown",
 					"left": 326,
-					"top": 287,
+					"top": 302,
 					"width": 243,
 					"height": 23,
 					"events": [
@@ -791,7 +828,7 @@
 				"RuntimeVLApplicationIcon": {
 					"type": "input",
 					"left": 580,
-					"top": 242,
+					"top": 257,
 					"width": 32,
 					"height": 32,
 					"enterable": false,
@@ -813,7 +850,7 @@
 				"BuildApp.AutoUpdate.RuntimeVL.StartElevated": {
 					"type": "checkbox",
 					"text": "Start Elevated",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -843,7 +880,7 @@
 				"BuildApp.CS.BuildServerApplication": {
 					"type": "checkbox",
 					"text": "Build Server Application",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -858,7 +895,7 @@
 				"BuildApp.SourcesFiles.CS.ServerIncludeIt": {
 					"type": "checkbox",
 					"text": "Server Include It",
-					"top": 145,
+					"top": 160,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -873,7 +910,7 @@
 				"BuildApp.SourcesFiles.CS.IsOEM": {
 					"type": "checkbox",
 					"text": "Is OEM",
-					"top": 185,
+					"top": 200,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -888,7 +925,7 @@
 				"BuildApp.CS.LastDataPathLookup": {
 					"type": "dropdown",
 					"left": 406,
-					"top": 207,
+					"top": 222,
 					"width": 163,
 					"height": 23,
 					"events": [
@@ -902,7 +939,7 @@
 				"Text45": {
 					"type": "text",
 					"text": "Last Data Path Lookup:",
-					"top": 210,
+					"top": 225,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -912,7 +949,7 @@
 				"BuildApp.CS.ServerSelectionAllowed": {
 					"type": "checkbox",
 					"text": "Server Selection Allowed",
-					"top": 325,
+					"top": 340,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -927,7 +964,7 @@
 				"BuildApp.CS.ServerEmbedsProjectDirectoryFile": {
 					"type": "checkbox",
 					"text": "Server Embeds Project Directory File",
-					"top": 345,
+					"top": 360,
 					"left": 160,
 					"width": 272,
 					"height": 21,
@@ -942,7 +979,7 @@
 				"BuildApp.CS.ServerDataCollection": {
 					"type": "checkbox",
 					"text": "Server Data Collection",
-					"top": 365,
+					"top": 380,
 					"left": 160,
 					"width": 272,
 					"height": 21,
@@ -957,7 +994,7 @@
 				"BuildApp.CS.HideDataExplorerMenuItem": {
 					"type": "checkbox",
 					"text": "Hide Data Explorer Menu Item",
-					"top": 325,
+					"top": 340,
 					"left": 420,
 					"width": 232,
 					"height": 21,
@@ -972,7 +1009,7 @@
 				"BuildApp.CS.HideRuntimeExplorerMenuItem": {
 					"type": "checkbox",
 					"text": "Hide Runtime Explorer Menu Item",
-					"top": 345,
+					"top": 360,
 					"left": 420,
 					"width": 232,
 					"height": 21,
@@ -987,7 +1024,7 @@
 				"BuildApp.CS.HideAdministrationMenuItem": {
 					"type": "checkbox",
 					"text": "Hide Administration Menu Item",
-					"top": 365,
+					"top": 380,
 					"left": 420,
 					"width": 232,
 					"height": 21,
@@ -1002,7 +1039,7 @@
 				"Text46": {
 					"type": "text",
 					"text": "Server Folder:",
-					"top": 250,
+					"top": 265,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -1012,7 +1049,7 @@
 				"Server.ServerFolder": {
 					"type": "dropdown",
 					"left": 326,
-					"top": 247,
+					"top": 262,
 					"width": 243,
 					"height": 23,
 					"events": [
@@ -1026,7 +1063,7 @@
 				"ServerApplicationIcon": {
 					"type": "input",
 					"left": 580,
-					"top": 242,
+					"top": 257,
 					"width": 32,
 					"height": 32,
 					"enterable": false,
@@ -1048,7 +1085,7 @@
 				"Text48": {
 					"type": "text",
 					"text": "Server Icon Path:",
-					"top": 290,
+					"top": 305,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -1058,7 +1095,7 @@
 				"ServerIcon": {
 					"type": "input",
 					"left": 580,
-					"top": 282,
+					"top": 297,
 					"width": 32,
 					"height": 32,
 					"enterable": false,
@@ -1080,7 +1117,7 @@
 				"Server.ServerIconPath": {
 					"type": "dropdown",
 					"left": 326,
-					"top": 287,
+					"top": 302,
 					"width": 243,
 					"height": 23,
 					"events": [
@@ -1094,7 +1131,7 @@
 				"BuildApp.CS.IPAddress": {
 					"type": "input",
 					"left": 400,
-					"top": 404,
+					"top": 419,
 					"width": 224,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.CS.IPAddress",
@@ -1103,7 +1140,7 @@
 				"Text53": {
 					"type": "text",
 					"text": "IP Address:",
-					"top": 405,
+					"top": 420,
 					"left": 280,
 					"width": 110,
 					"height": 16,
@@ -1113,7 +1150,7 @@
 				"BuildApp.CS.PortNumber": {
 					"type": "input",
 					"left": 400,
-					"top": 434,
+					"top": 449,
 					"width": 64,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.CS.PortNumber",
@@ -1122,7 +1159,7 @@
 				"Text54": {
 					"type": "text",
 					"text": "Port Number:",
-					"top": 435,
+					"top": 450,
 					"left": 280,
 					"width": 110,
 					"height": 16,
@@ -1132,7 +1169,7 @@
 				"BuildApp.CS.ServerStructureFolderName": {
 					"type": "input",
 					"left": 400,
-					"top": 464,
+					"top": 479,
 					"width": 224,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.CS.ServerStructureFolderName",
@@ -1141,7 +1178,7 @@
 				"Text57": {
 					"type": "text",
 					"text": "Server Structure Folder Name:",
-					"top": 465,
+					"top": 480,
 					"left": 160,
 					"width": 230,
 					"height": 16,
@@ -1151,7 +1188,7 @@
 				"BuildApp.CS.ClientServerSystemFolderName": {
 					"type": "input",
 					"left": 400,
-					"top": 494,
+					"top": 509,
 					"width": 224,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.CS.ClientServerSystemFolderName",
@@ -1160,7 +1197,7 @@
 				"Text58": {
 					"type": "text",
 					"text": "Client Server System Folder Name:",
-					"top": 495,
+					"top": 510,
 					"left": 160,
 					"width": 230,
 					"height": 16,
@@ -1170,7 +1207,7 @@
 				"BuildApp.AutoUpdate.CS.Server.StartElevated": {
 					"type": "checkbox",
 					"text": "Start Elevated",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1210,7 +1247,7 @@
 				"BuildApp.CS.BuildCSUpgradeable": {
 					"type": "checkbox",
 					"text": "Build CS Upgradeable",
-					"top": 185,
+					"top": 200,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1225,7 +1262,7 @@
 				"BuildApp.CS.ClientWinSingleInstance": {
 					"type": "checkbox",
 					"text": "Client Win Single Instance",
-					"top": 185,
+					"top": 200,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -1285,7 +1322,7 @@
 				"BuildApp.SourcesFiles.CS.ClientMacIncludeIt": {
 					"type": "checkbox",
 					"text": "Client Mac Include It",
-					"top": 145,
+					"top": 160,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -1300,7 +1337,7 @@
 				"BuildApp.SourcesFiles.CS.ClientWinIncludeIt": {
 					"type": "checkbox",
 					"text": "Client Win Include It",
-					"top": 165,
+					"top": 180,
 					"left": 420,
 					"width": 192,
 					"height": 21,
@@ -1652,7 +1689,7 @@
 				"BuildApp.AutoUpdate.CS.Client.StartElevated": {
 					"type": "checkbox",
 					"text": "Start Elevated",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1667,7 +1704,7 @@
 				"BuildApp.CS.BuildServerApplication1": {
 					"type": "checkbox",
 					"text": "Build Server Application",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1712,7 +1749,7 @@
 				"BuildApp.SignApplication.MacSignature": {
 					"type": "checkbox",
 					"text": "Mac Signature",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1728,7 +1765,7 @@
 				"BuildApp.SignApplication.AdHocSign": {
 					"type": "checkbox",
 					"text": "AdHoc Sign",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -1744,7 +1781,7 @@
 				"BuildApp.SignApplication.MacCertificate": {
 					"type": "input",
 					"left": 320,
-					"top": 209,
+					"top": 219,
 					"width": 304,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.SignApplication.MacCertificate",
@@ -1756,7 +1793,7 @@
 				"Text62": {
 					"type": "text",
 					"text": "Mac Certificate:",
-					"top": 210,
+					"top": 220,
 					"left": 160,
 					"width": 150,
 					"height": 16,
@@ -1770,7 +1807,7 @@
 				"BuildApp.Versioning.Common.CommonVersion1": {
 					"type": "input",
 					"left": 360,
-					"top": 149,
+					"top": 159,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonVersion",
@@ -1779,7 +1816,7 @@
 				"Text33": {
 					"type": "text",
 					"text": "Common Version:",
-					"top": 150,
+					"top": 160,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1789,7 +1826,7 @@
 				"BuildApp.Versioning.Common.CommonCopyright": {
 					"type": "input",
 					"left": 360,
-					"top": 174,
+					"top": 184,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonCopyright",
@@ -1798,7 +1835,7 @@
 				"Text34": {
 					"type": "text",
 					"text": "Common Copyright:",
-					"top": 175,
+					"top": 185,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1808,7 +1845,7 @@
 				"BuildApp.Versioning.Common.CommonCreator": {
 					"type": "input",
 					"left": 360,
-					"top": 199,
+					"top": 209,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonCreator",
@@ -1817,7 +1854,7 @@
 				"Text35": {
 					"type": "text",
 					"text": "Common Creator:",
-					"top": 200,
+					"top": 210,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1827,7 +1864,7 @@
 				"BuildApp.Versioning.Common.CommonComment": {
 					"type": "input",
 					"left": 360,
-					"top": 224,
+					"top": 234,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonComment",
@@ -1836,7 +1873,7 @@
 				"Text36": {
 					"type": "text",
 					"text": "Common Comment:",
-					"top": 225,
+					"top": 235,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1846,7 +1883,7 @@
 				"BuildApp.Versioning.Common.CommonInternalName": {
 					"type": "input",
 					"left": 360,
-					"top": 299,
+					"top": 309,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonInternalName",
@@ -1855,7 +1892,7 @@
 				"Text37": {
 					"type": "text",
 					"text": "Common Internal Name:",
-					"top": 300,
+					"top": 310,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1865,7 +1902,7 @@
 				"BuildApp.Versioning.Common.CommonLegalTrademark": {
 					"type": "input",
 					"left": 360,
-					"top": 324,
+					"top": 334,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonLegalTrademark",
@@ -1874,7 +1911,7 @@
 				"Text38": {
 					"type": "text",
 					"text": "Common Legal Trademark:",
-					"top": 325,
+					"top": 335,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1884,7 +1921,7 @@
 				"BuildApp.Versioning.Common.CommonCompanyName": {
 					"type": "input",
 					"left": 360,
-					"top": 249,
+					"top": 259,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonCompanyName",
@@ -1893,7 +1930,7 @@
 				"Text39": {
 					"type": "text",
 					"text": "Common Company Name:",
-					"top": 250,
+					"top": 260,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1903,7 +1940,7 @@
 				"BuildApp.Versioning.Common.CommonFileDescription": {
 					"type": "input",
 					"left": 360,
-					"top": 274,
+					"top": 284,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonFileDescription",
@@ -1912,7 +1949,7 @@
 				"Text40": {
 					"type": "text",
 					"text": "Common File Description:",
-					"top": 275,
+					"top": 285,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1922,7 +1959,7 @@
 				"BuildApp.Versioning.Common.CommonPrivateBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 349,
+					"top": 359,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonPrivateBuild",
@@ -1931,7 +1968,7 @@
 				"Text41": {
 					"type": "text",
 					"text": "Common Private Build:",
-					"top": 350,
+					"top": 360,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -1941,7 +1978,7 @@
 				"BuildApp.Versioning.Common.CommonSpecialBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 374,
+					"top": 384,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Common.CommonSpecialBuild",
@@ -1950,7 +1987,7 @@
 				"Text42": {
 					"type": "text",
 					"text": "Common Special Build:",
-					"top": 375,
+					"top": 385,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2003,7 +2040,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLVersion": {
 					"type": "input",
 					"left": 360,
-					"top": 149,
+					"top": 159,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLVersion",
@@ -2012,7 +2049,7 @@
 				"Text23": {
 					"type": "text",
 					"text": "RuntimeVL Version:",
-					"top": 150,
+					"top": 160,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2022,7 +2059,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLCopyright": {
 					"type": "input",
 					"left": 360,
-					"top": 174,
+					"top": 184,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLCopyright",
@@ -2031,7 +2068,7 @@
 				"Text24": {
 					"type": "text",
 					"text": "RuntimeVL Copyright:",
-					"top": 175,
+					"top": 185,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2041,7 +2078,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLCreator": {
 					"type": "input",
 					"left": 360,
-					"top": 199,
+					"top": 209,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLCreator",
@@ -2050,7 +2087,7 @@
 				"Text25": {
 					"type": "text",
 					"text": "RuntimeVL Creator:",
-					"top": 200,
+					"top": 210,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2060,7 +2097,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLComment": {
 					"type": "input",
 					"left": 360,
-					"top": 224,
+					"top": 234,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLComment",
@@ -2069,7 +2106,7 @@
 				"Text26": {
 					"type": "text",
 					"text": "RuntimeVL Comment:",
-					"top": 225,
+					"top": 235,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2079,7 +2116,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLInternalName": {
 					"type": "input",
 					"left": 360,
-					"top": 299,
+					"top": 309,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLInternalName",
@@ -2088,7 +2125,7 @@
 				"Text27": {
 					"type": "text",
 					"text": "RuntimeVL Internal Name:",
-					"top": 300,
+					"top": 310,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2098,7 +2135,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLLegalTrademark": {
 					"type": "input",
 					"left": 360,
-					"top": 324,
+					"top": 334,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLLegalTrademark",
@@ -2107,7 +2144,7 @@
 				"Text28": {
 					"type": "text",
 					"text": "RuntimeVL Legal Trademark:",
-					"top": 325,
+					"top": 335,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2117,7 +2154,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLCompanyName": {
 					"type": "input",
 					"left": 360,
-					"top": 249,
+					"top": 259,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLCompanyName",
@@ -2126,7 +2163,7 @@
 				"Text29": {
 					"type": "text",
 					"text": "RuntimeVL Company Name:",
-					"top": 250,
+					"top": 260,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2136,7 +2173,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLFileDescription1": {
 					"type": "input",
 					"left": 360,
-					"top": 274,
+					"top": 284,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLFileDescription",
@@ -2145,7 +2182,7 @@
 				"Text30": {
 					"type": "text",
 					"text": "RuntimeVL File Description:",
-					"top": 275,
+					"top": 285,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2155,7 +2192,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLPrivateBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 349,
+					"top": 359,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLPrivateBuild",
@@ -2164,7 +2201,7 @@
 				"Text31": {
 					"type": "text",
 					"text": "RuntimeVL Private Build:",
-					"top": 350,
+					"top": 360,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2174,7 +2211,7 @@
 				"BuildApp.Versioning.RuntimeVL.RuntimeVLSpecialBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 374,
+					"top": 384,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.RuntimeVL.RuntimeVLSpecialBuild",
@@ -2183,7 +2220,7 @@
 				"Text32": {
 					"type": "text",
 					"text": "RuntimeVL Special Build:",
-					"top": 375,
+					"top": 385,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2227,7 +2264,7 @@
 				"BuildApp.Versioning.Server.ServerVersion": {
 					"type": "input",
 					"left": 360,
-					"top": 149,
+					"top": 159,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerVersion",
@@ -2236,7 +2273,7 @@
 				"Text13": {
 					"type": "text",
 					"text": "Server Version:",
-					"top": 150,
+					"top": 160,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2246,7 +2283,7 @@
 				"BuildApp.Versioning.Server.ServerCopyright": {
 					"type": "input",
 					"left": 360,
-					"top": 174,
+					"top": 184,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerCopyright",
@@ -2255,7 +2292,7 @@
 				"Text14": {
 					"type": "text",
 					"text": "Server Copyright:",
-					"top": 175,
+					"top": 185,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2265,7 +2302,7 @@
 				"BuildApp.Versioning.Server.ServerCreator": {
 					"type": "input",
 					"left": 360,
-					"top": 199,
+					"top": 209,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerCreator",
@@ -2274,7 +2311,7 @@
 				"Text15": {
 					"type": "text",
 					"text": "Server Creator:",
-					"top": 200,
+					"top": 210,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2284,7 +2321,7 @@
 				"BuildApp.Versioning.Server.ServerComment": {
 					"type": "input",
 					"left": 360,
-					"top": 224,
+					"top": 234,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerComment",
@@ -2293,7 +2330,7 @@
 				"Text16": {
 					"type": "text",
 					"text": "Server Comment:",
-					"top": 225,
+					"top": 235,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2303,7 +2340,7 @@
 				"BuildApp.Versioning.Server.ServerInternalName": {
 					"type": "input",
 					"left": 360,
-					"top": 299,
+					"top": 309,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerInternalName",
@@ -2312,7 +2349,7 @@
 				"Text17": {
 					"type": "text",
 					"text": "Server Internal Name:",
-					"top": 300,
+					"top": 310,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2322,7 +2359,7 @@
 				"BuildApp.Versioning.Server.ServerLegalTrademark": {
 					"type": "input",
 					"left": 360,
-					"top": 324,
+					"top": 334,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerLegalTrademark",
@@ -2331,7 +2368,7 @@
 				"Text18": {
 					"type": "text",
 					"text": "Server Legal Trademark:",
-					"top": 325,
+					"top": 335,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2341,7 +2378,7 @@
 				"BuildApp.Versioning.Server.ServerCompanyName": {
 					"type": "input",
 					"left": 360,
-					"top": 249,
+					"top": 259,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerCompanyName",
@@ -2350,7 +2387,7 @@
 				"Text19": {
 					"type": "text",
 					"text": "Server Company Name:",
-					"top": 250,
+					"top": 260,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2360,7 +2397,7 @@
 				"BuildApp.Versioning.Server.ServerFileDescription": {
 					"type": "input",
 					"left": 360,
-					"top": 274,
+					"top": 284,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerFileDescription",
@@ -2369,7 +2406,7 @@
 				"Text20": {
 					"type": "text",
 					"text": "Server File Description:",
-					"top": 275,
+					"top": 285,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2379,7 +2416,7 @@
 				"BuildApp.Versioning.Server.ServerPrivateBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 349,
+					"top": 359,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerPrivateBuild",
@@ -2388,7 +2425,7 @@
 				"Text21": {
 					"type": "text",
 					"text": "Server Private Build:",
-					"top": 350,
+					"top": 360,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2398,7 +2435,7 @@
 				"BuildApp.Versioning.Server.ServerSpecialBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 374,
+					"top": 384,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Server.ServerSpecialBuild",
@@ -2407,7 +2444,7 @@
 				"Text22": {
 					"type": "text",
 					"text": "Server Special Build:",
-					"top": 375,
+					"top": 385,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2451,7 +2488,7 @@
 				"BuildApp.Versioning.Client.ClientVersion": {
 					"type": "input",
 					"left": 360,
-					"top": 149,
+					"top": 159,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientVersion",
@@ -2460,7 +2497,7 @@
 				"Text3": {
 					"type": "text",
 					"text": "Client Version:",
-					"top": 150,
+					"top": 160,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2470,7 +2507,7 @@
 				"BuildApp.Versioning.Client.ClientCopyright": {
 					"type": "input",
 					"left": 360,
-					"top": 174,
+					"top": 184,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientCopyright",
@@ -2479,7 +2516,7 @@
 				"Text4": {
 					"type": "text",
 					"text": "Client Copyright:",
-					"top": 175,
+					"top": 185,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2489,7 +2526,7 @@
 				"BuildApp.Versioning.Client.ClientCreator": {
 					"type": "input",
 					"left": 360,
-					"top": 199,
+					"top": 209,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientCreator",
@@ -2498,7 +2535,7 @@
 				"Text5": {
 					"type": "text",
 					"text": "Client Creator:",
-					"top": 200,
+					"top": 210,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2508,7 +2545,7 @@
 				"BuildApp.Versioning.Client.ClientComment": {
 					"type": "input",
 					"left": 360,
-					"top": 224,
+					"top": 234,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientComment",
@@ -2517,7 +2554,7 @@
 				"Text6": {
 					"type": "text",
 					"text": "Client Comment:",
-					"top": 225,
+					"top": 235,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2527,7 +2564,7 @@
 				"BuildApp.Versioning.Client.ClientInternalName": {
 					"type": "input",
 					"left": 360,
-					"top": 299,
+					"top": 309,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientInternalName",
@@ -2536,7 +2573,7 @@
 				"Text7": {
 					"type": "text",
 					"text": "Client Internal Name:",
-					"top": 300,
+					"top": 310,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2546,7 +2583,7 @@
 				"BuildApp.Versioning.Client.ClientLegalTrademark": {
 					"type": "input",
 					"left": 360,
-					"top": 324,
+					"top": 334,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientLegalTrademark",
@@ -2555,7 +2592,7 @@
 				"Text8": {
 					"type": "text",
 					"text": "Client Legal Trademark:",
-					"top": 325,
+					"top": 335,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2565,7 +2602,7 @@
 				"BuildApp.Versioning.Client.ClientCompanyName": {
 					"type": "input",
 					"left": 360,
-					"top": 249,
+					"top": 259,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientCompanyName",
@@ -2574,7 +2611,7 @@
 				"Text9": {
 					"type": "text",
 					"text": "Client Company Name:",
-					"top": 250,
+					"top": 260,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2584,7 +2621,7 @@
 				"BuildApp.Versioning.Client.ClientFileDescription": {
 					"type": "input",
 					"left": 360,
-					"top": 274,
+					"top": 284,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientFileDescription",
@@ -2593,7 +2630,7 @@
 				"Text10": {
 					"type": "text",
 					"text": "Client File Description:",
-					"top": 275,
+					"top": 285,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2603,7 +2640,7 @@
 				"BuildApp.Versioning.Client.ClientPrivateBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 349,
+					"top": 359,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientPrivateBuild",
@@ -2612,7 +2649,7 @@
 				"Text11": {
 					"type": "text",
 					"text": "Client Private Build:",
-					"top": 350,
+					"top": 360,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2622,7 +2659,7 @@
 				"BuildApp.Versioning.Client.ClientSpecialBuild": {
 					"type": "input",
 					"left": 360,
-					"top": 374,
+					"top": 384,
 					"width": 204,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Versioning.Client.ClientSpecialBuild",
@@ -2631,7 +2668,7 @@
 				"Text12": {
 					"type": "text",
 					"text": "Client Special Build:",
-					"top": 375,
+					"top": 385,
 					"left": 160,
 					"width": 190,
 					"height": 16,
@@ -2675,7 +2712,7 @@
 				"BuildApp.AutoUpdate.CS.ClientUpdateWin.StartElevated": {
 					"type": "checkbox",
 					"text": "Start Elevated (Mac Server)",
-					"top": 165,
+					"top": 180,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -2690,7 +2727,7 @@
 				"BuildApp.BuildApplicationLight": {
 					"type": "checkbox",
 					"text": "Build Application Light",
-					"top": 145,
+					"top": 160,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -2705,7 +2742,7 @@
 				"BuildApp.CS.BuildV13ClientUpgrades": {
 					"type": "checkbox",
 					"text": "Build v13 Client Upgrades",
-					"top": 185,
+					"top": 200,
 					"left": 160,
 					"width": 192,
 					"height": 21,
@@ -2720,7 +2757,7 @@
 				"BuildApp.CS.HardLink": {
 					"type": "input",
 					"left": 400,
-					"top": 409,
+					"top": 419,
 					"width": 224,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.CS.HardLink",
@@ -2729,7 +2766,7 @@
 				"Text52": {
 					"type": "text",
 					"text": "Hard Link:",
-					"top": 410,
+					"top": 420,
 					"left": 280,
 					"width": 110,
 					"height": 16,
@@ -2739,7 +2776,7 @@
 				"DataFilePath": {
 					"type": "text",
 					"text": "Data File Path:",
-					"top": 330,
+					"top": 340,
 					"left": 280,
 					"width": 110,
 					"height": 16,
@@ -2749,7 +2786,7 @@
 				"BuildApp.DataFilePath": {
 					"type": "input",
 					"left": 400,
-					"top": 329,
+					"top": 339,
 					"width": 224,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.DataFilePath",
@@ -2762,7 +2799,7 @@
 			]
 		}
 	],
-	"geometryStamp": 3158,
+	"geometryStamp": 3483,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

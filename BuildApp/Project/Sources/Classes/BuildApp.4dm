@@ -941,7 +941,6 @@ Function parseFile($settingsFile : 4D:C1709.File)->$BuildApp : cs:C1710.BuildApp
 					If (OK=1)
 						DOM GET XML ELEMENT VALUE:C731($ItemsCount; $intValue)
 						ARRAY OBJECT:C1221($DatabaseNames; $intValue)
-						//$_BuildApp.Licenses[$name].ItemsCount:=$intValue
 						$Item:=DOM Get next sibling XML element:C724($ItemsCount)
 						For ($j; 0; $intValue-1)  //0 based index
 							DOM GET XML ELEMENT VALUE:C731($Item; $stringValue)
@@ -950,6 +949,20 @@ Function parseFile($settingsFile : 4D:C1709.File)->$BuildApp : cs:C1710.BuildApp
 						End for 
 					End if 
 				End for 
+				
+				$EvaluationMode:=DOM Find XML element:C864($dom; "/Preferences4D/BuildApp/Licenses/EvaluationMode")
+				
+				If (OK=1)
+					DOM GET XML ELEMENT VALUE:C731($EvaluationMode; $boolValue)
+					$_BuildApp.Licenses.EvaluationMode:=$boolValue
+				End if 
+				
+				$EvaluationName:=DOM Find XML element:C864($dom; "/Preferences4D/BuildApp/Licenses/EvaluationName")
+				
+				If (OK=1)
+					DOM GET XML ELEMENT VALUE:C731($EvaluationName; $stringValue)
+					$_BuildApp.Licenses.EvaluationName:=$stringValue
+				End if 
 				
 				ARRAY TEXT:C222($names; 4)
 				
