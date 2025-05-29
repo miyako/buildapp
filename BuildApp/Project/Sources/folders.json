@@ -5,6 +5,7 @@
 		],
 		"classes": [
 			"_BuildAppUI",
+			"_ComponentManager",
 			"_Terminal",
 			"BuildApp"
 		]

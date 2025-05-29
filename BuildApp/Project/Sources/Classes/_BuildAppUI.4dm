@@ -1,3 +1,22 @@
+property BuildApp : Object
+property compileProject : 4D:C1709.File
+property RuntimeVLIcon : Picture
+property RuntimeVLApplicationIcon : Picture
+property ServerApplicationIcon : Picture
+property MacCompiledDatabaseToWinApplicationIcon : Picture
+property DatabaseToEmbedInClientMacApplicationIcon : Picture
+property ClientMacIcon : Picture
+property ClientWinIcon : Picture
+property ServerIcon : Picture
+property DatabaseToEmbedInClientWinApplicationIcon : Picture
+property Server : Object
+property ClientMac : Object
+property ClientWin : Object
+property DatabaseToEmbedInClientMac : Object
+property DatabaseToEmbedInClientWin : Object
+property MacCompiledDatabaseToWin : Object
+property pages : Collection
+
 Class constructor($buildApp : cs:C1710.BuildApp; $compileProject : 4D:C1709.File))
 	
 	This:C1470.BuildApp:=$buildApp
