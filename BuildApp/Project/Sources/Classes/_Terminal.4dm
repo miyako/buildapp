@@ -1,5 +1,7 @@
 property tool4d : 4D:C1709.File
 property compiler : 4D:C1709.Folder
+property compilerFolderName : Text
+property assetUrl : Text
 
 Class constructor
 	
@@ -12,7 +14,6 @@ Class constructor
 	This:C1470.compiler:=File:C1566("/RESOURCES/4d-class-compiler/Project/compiler.4DProject")
 	This:C1470.compilerFolderName:=This:C1470.compiler.parent.parent.fullName
 	This:C1470.assetUrl:="https://github.com/miyako/4d-class-compiler/releases/latest/download/4d-class-compiler.zip"
-	This:C1470.form:=$form
 	
 	If (Not:C34(This:C1470.compiler.exists))
 		

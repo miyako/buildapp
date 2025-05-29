@@ -1,6 +1,9 @@
 property _settingsFile : 4D:C1709.File
 property _templateFile : 4D:C1709.File
 property _settings : Object
+property Licenses : Object
+property SourcesFiles : Object
+property SignApplication : Object
 
 Class constructor($settingsFile : 4D:C1709.File)
 	
