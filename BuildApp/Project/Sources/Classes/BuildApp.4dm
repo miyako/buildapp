@@ -348,7 +348,8 @@ Function parseFile($settingsFile : 4D:C1709.File)->$BuildApp : cs:C1710.BuildApp
 	$_BuildApp.Licenses:={\
 		ArrayLicenseWin: {ItemsCount: Formula:C1597(This:C1470.Item.length); Item: []}; \
 		ArrayLicenseMac: {ItemsCount: Formula:C1597(This:C1470.Item.length); Item: []}; \
-		EvaluationMode: False:C215\
+		EvaluationMode: False:C215; \
+		EvaluationName: ""\
 		}
 	
 	$_BuildApp.RuntimeVL:={LastDataPathLookup: "ByAppName"}
