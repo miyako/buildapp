@@ -38,7 +38,8 @@ Function _dialog($buildApp : cs:C1710.BuildApp; $compileProject : 4D:C1709.File)
 	$form.pages.push({page: 7; title: "Version/RuntimeVL"})
 	$form.pages.push({page: 8; title: "Version/Server"})
 	$form.pages.push({page: 9; title: "Version/Client"})
-	$form.pages.push({page: 10; title: "Deprecated"})
+	$form.pages.push({page: 10; title: "Security"})
+	$form.pages.push({page: 11; title: "Deprecated"})
 	
 	$window:=Open form window:C675("BuildApp")
 	DIALOG:C40("BuildApp"; $form; *)
@@ -324,6 +325,8 @@ Function parseFile($settingsFile : 4D:C1709.File)->$BuildApp : cs:C1710.BuildApp
 		}
 	
 	$_BuildApp.CS:={\
+		CertificateDomainName: ""; \
+		CertificateAuthoritiesCertificates: ""; \
 		BuildServerApplication: False:C215; \
 		BuildCSUpgradeable: False:C215; \
 		BuildV13ClientUpgrades: False:C215; \
@@ -743,6 +746,20 @@ Function parseFile($settingsFile : 4D:C1709.File)->$BuildApp : cs:C1710.BuildApp
 				If (OK=1)
 					DOM GET XML ELEMENT VALUE:C731($HardLink; $stringValue)
 					$_BuildApp.CS.HardLink:=$stringValue
+				End if 
+				
+				$CertificateDomainName:=DOM Find XML element:C864($dom; "/Preferences4D/BuildApp/CS/CertificateDomainName")
+				
+				If (OK=1)
+					DOM GET XML ELEMENT VALUE:C731($CertificateDomainName; $stringValue)
+					$_BuildApp.CS.CertificateDomainName:=$stringValue
+				End if 
+				
+				$CertificateAuthoritiesCertifica:=DOM Find XML element:C864($dom; "/Preferences4D/BuildApp/CS/CertificateAuthoritiesCertificates")
+				
+				If (OK=1)
+					DOM GET XML ELEMENT VALUE:C731($CertificateAuthoritiesCertifica; $stringValue)
+					$_BuildApp.CS.CertificateAuthoritiesCertificates:=$stringValue
 				End if 
 				
 				$BuildV13ClientUpgrades:=DOM Find XML element:C864($dom; "/Preferences4D/BuildApp/CS/BuildV13ClientUpgrades")
