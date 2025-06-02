@@ -6,7 +6,7 @@
   ],
   "license": "MIT",
   "repository": "https://github.com/miyako/4d-class-buildapp",
-  "version": "20R9.16",
+  "version": "20R9.17",
   "tool": {
     "platform": "macos",
     "branch": "20%20Rx",
