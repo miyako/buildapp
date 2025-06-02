@@ -359,7 +359,8 @@
 					"width": 130,
 					"height": 16,
 					"textAlign": "right",
-					"fontWeight": "normal"
+					"fontWeight": "normal",
+					"visibility": "hidden"
 				},
 				"BuildApp.Licenses.EvaluationName": {
 					"type": "input",
@@ -368,7 +369,8 @@
 					"width": 150,
 					"height": 17,
 					"dataSource": "Form:C1466.BuildApp.Licenses.EvaluationName",
-					"multiline": "no"
+					"multiline": "no",
+					"visibility": "hidden"
 				}
 			},
 			"entryOrder": [
@@ -2837,7 +2839,7 @@
 			}
 		}
 	],
-	"geometryStamp": 3551,
+	"geometryStamp": 3553,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
