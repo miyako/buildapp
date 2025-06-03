@@ -26,7 +26,7 @@ Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys
 * Alternative to [Build4D](https://github.com/4d-depot/Build4D)
 * Compatible with [BUILD APPLICATION](https://doc.4d.com/4Dv20/4D/20.2/BUILD-APPLICATION.301-6720787.en.html)
 * Automatically downloads latest [4d-class-compiler](https://github.com/miyako/4d-class-compiler) from GitHub
-* Supports all XML keys up to v20
+* Supports all XML keys up to ~~v20~~ 20 R9
 * Converts XML to JSON and vice versa
 * GUI editor
 * `tool4d` launcher
