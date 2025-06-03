@@ -15,6 +15,12 @@
 }
 ```
 
+## What's New (June 2025)
+
+- [x] [EvaluationMode](https://blog.4d.com/building-evaluation-applications/) (20 R9)
+- [x] [LIEF (Application UUID)](https://blog.4d.com/defining-the-4d-built-application-uuid-for-macos/) (20 R8)
+- [x] [CertificateDomainName, CertificateAuthoritiesCertificates](https://blog.4d.com/encryption-authentication-certificate-authority-validation/) (20 R7)
+
 Classes to edit [buildApp.4DSettings](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
 
 * Alternative to [Build4D](https://github.com/4d-depot/Build4D)
