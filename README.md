@@ -15,6 +15,8 @@
 }
 ```
 
+- [ ] `AutomaticLicenseIntegration` (20 R10)
+
 ## What's New (June 2025)
 
 - [x] [EvaluationMode](https://blog.4d.com/building-evaluation-applications/) (20 R9)
