@@ -348,8 +348,7 @@
 					"dataSource": "Form:C1466.BuildApp.Licenses.EvaluationMode",
 					"dataSourceTypeHint": "boolean",
 					"fontWeight": "normal",
-					"focusable": false,
-					"method": "ObjectMethods/BuildApp.Licenses.EvaluationMode.4dm"
+					"focusable": false
 				},
 				"Text75": {
 					"type": "text",
@@ -371,6 +370,21 @@
 					"dataSource": "Form:C1466.BuildApp.Licenses.EvaluationName",
 					"multiline": "no",
 					"visibility": "hidden"
+				},
+				"BuildApp.Licenses.AutomaticLicenseIntegration": {
+					"type": "checkbox",
+					"text": "Automatic License Integration",
+					"top": 95,
+					"left": 360,
+					"width": 212,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.BuildApp.Licenses.AutomaticLicenseIntegration",
+					"dataSourceTypeHint": "boolean",
+					"fontWeight": "normal",
+					"focusable": false
 				}
 			},
 			"entryOrder": [
@@ -389,7 +403,8 @@
 				"Show XML…",
 				"Show JSON…",
 				"BuildApp.Licenses.EvaluationMode",
-				"BuildApp.Licenses.EvaluationName"
+				"BuildApp.Licenses.EvaluationName",
+				"BuildApp.Licenses.AutomaticLicenseIntegration"
 			]
 		},
 		{
@@ -2801,7 +2816,7 @@
 			]
 		}
 	],
-	"geometryStamp": 3485,
+	"geometryStamp": 3491,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
