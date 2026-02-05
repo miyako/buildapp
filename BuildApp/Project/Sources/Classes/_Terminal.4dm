@@ -1,5 +1,5 @@
 property tool4d : 4D:C1709.File
-property compiler : 4D:C1709.Folder
+property compiler : 4D:C1709.File
 property compilerFolderName : Text
 property assetUrl : Text
 
