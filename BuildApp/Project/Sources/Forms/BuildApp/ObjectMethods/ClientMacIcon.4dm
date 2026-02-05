@@ -10,7 +10,7 @@ Case of
 		Case of 
 			: ($path="")
 				//
-			: (Path to object:C1547($path).extension=".icns")
+			: (Path to object:C1547($path).extension=".icns") || (Path to object:C1547($path).extension=".icon")
 				$0:=0
 		End case 
 		
