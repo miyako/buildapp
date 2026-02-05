@@ -10,7 +10,7 @@ Case of
 		Case of 
 			: ($path="")
 				//
-			: (Is macOS:C1572) && (Path to object:C1547($path).extension=".icns")
+			: (Is macOS:C1572) && ((Path to object:C1547($path).extension=".icns") || (Path to object:C1547($path).extension=".icon"))
 				$0:=0
 			: (Is Windows:C1573) && (Path to object:C1547($path).extension=".ico")
 				$0:=0
