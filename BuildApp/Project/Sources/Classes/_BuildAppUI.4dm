@@ -295,6 +295,13 @@ Function _setupIconPath($name : Text)->$icon : Picture
 	
 	If (Value type:C1509($path)=Is text:K8:3) && ($path#"")
 		READ PICTURE FILE:C678($path; $icon)
+		If (Is macOS:C1572) && (Test path name:C476($path)=Is a folder:K24:2)
+			var $images : Collection
+			$images:=Folder:C1567($path; fk platform path:K87:2).folder("Assets").files(fk ignore invisible:K87:22).query("extension in :1"; [".png"; ".jpg"; ".jpeg"; ".svg"; ".webp"; ".bmp"; ".gif"; ".tif"; ".tiff"])
+			If ($images.length#0)
+				READ PICTURE FILE:C678($images.first().platformPath; $icon)
+			End if 
+		End if 
 		If (Is Windows:C1573)
 			PICTURE PROPERTIES:C457($icon; $width; $height)
 			TRANSFORM PICTURE:C988($icon; Scale:K61:2; 32/$width; 32/$height)
