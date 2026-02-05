@@ -48,7 +48,7 @@ Function onResponse($request : 4D:C1709.HTTPRequest; $event : Object)
 		$tempFile.setContent($request.response.body)
 		
 		$zip:=ZIP Read archive:C1637($tempFile)
-		$zip.root.copyTo($tempFolder)
+		$zip.root.folder(This:C1470.compilerFolderName).copyTo($tempFolder)
 		$tempFolder.folder(This:C1470.compilerFolderName).moveTo(Folder:C1567(fk resources folder:K87:11))
 		
 		OBJECT SET ENABLED:C1123(*; "Build CLI…"; This:C1470.compiler.exists && This:C1470.tool4d.exists)
